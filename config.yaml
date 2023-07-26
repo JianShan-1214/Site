@@ -1,0 +1,227 @@
+baseurl: https://blog.jianshan.me
+languageCode: zh-tw
+theme: hugo-theme-stack
+paginate: 5
+title: JianShan's Blog
+
+# 將它改成你的 Disqus 短名稱
+disqusShortname: hugo-theme-stack
+
+# Google Analytics 追蹤 ID
+googleAnalytics:
+
+# 主題多語言支援
+# 可用的值: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
+DefaultContentLanguage: zh-tw
+
+# 如果 DefaultContentLanguage 是 [zh-cn ja ko] 中的一個，將 hasCJKLanguage 設為 true
+# 這會讓 .Summary 和 .WordCount 正確處理 CJK 語言。
+hasCJKLanguage: true
+
+# 設定文章和頁面的永久連結格式
+permalinks:
+  post: /p/:slug/
+  page: /:slug/
+
+params:
+  mainSections:
+    - post
+  featuredImageField: image
+  rssFullContent: true
+  favicon:  # 例如：favicon 放在 `static/favicon.ico` 並將此欄位設為 `/favicon.ico`（`/` 是必要的）
+
+  footer:
+    since: 2020
+    customText:
+
+  dateFormat:
+    published: Jan 02, 2006
+    lastUpdated: Jan 02, 2006 15:04 MST
+
+  sidebar:
+    emoji:
+    subtitle: Engineer = coffee + code 
+    avatar:
+      enabled: true
+      local: true
+      src: /img/avatar.png
+
+  article:
+    math: false
+    toc: true
+    readingTime: true
+    license:
+      enabled: false
+      default: Licensed under CC BY-NC-SA 4.0
+
+  comments:
+    enabled: false
+    provider: disqus
+
+    disqusjs:
+      shortname:
+      apiUrl:
+      apiKey:
+      admin:
+      adminLabel:
+
+    utterances:
+      repo:
+      issueTerm: pathname
+      label:
+
+    remark42:
+      host:
+      site:
+      locale:
+
+    vssue:
+      platform:
+      owner:
+      repo:
+      clientId:
+      clientSecret:
+      autoCreateIssue: false
+
+    # Waline 客戶端設定，參見：https://waline.js.org/en/reference/component.html
+    waline:
+      serverURL:
+      lang:
+      pageview:
+      emoji:
+        - https://unpkg.com/@waline/emojis@1.0.1/weibo
+      requiredMeta:
+        - name
+        - email
+        - url
+      locale:
+        admin: Admin
+        placeholder:
+
+    twikoo:
+      envId:
+      region:
+      path:
+      lang:
+
+    # 參見 https://cactus.chat/docs/reference/web-client/#configuration 了解各種選項的描述
+    cactus:
+      defaultHomeserverUrl: "https://matrix.cactus.chat:8448"
+      serverName: "cactus.chat"
+      siteName: "" # 你必須插入一個唯一的識別符號，與你註冊的相符 (參見 https://cactus.chat/docs/getting-started/quick-start/#register-your-site)
+
+    giscus:
+      repo:
+      repoID:
+      category:
+      categoryID:
+      mapping:
+      lightTheme:
+      darkTheme:
+      reactionsEnabled: 1
+      emitMetadata: 0
+
+    gitalk:
+      owner:
+      admin:
+      repo:
+      clientID:
+      clientSecret:
+
+    cusdis:
+      host:
+      id:
+  
+  # 首頁和頁面的小工具
+  widgets:
+    homepage:
+      - type: search
+      - type: archives
+        params:
+          limit: 5
+      - type: categories
+        params:
+          limit: 10
+    page:
+      - type: toc
+
+opengraph:
+  twitter:
+    # 你的 Twitter 使用者名稱
+    site:
+
+    # 可用的值: summary, summary_large_image
+    card: summary_large_image
+
+defaultImage:
+  opengraph:
+    enabled: true
+    local: false
+    src:
+
+colorScheme:
+  # 顯示切換
+  toggle: true
+
+  # 可用的值: auto, light, dark
+  default: auto
+
+imageProcessing:
+  cover:
+    enabled: true
+  content:
+    enabled: true
+
+# 自定義選單
+# 參見 https://docs.stack.jimmycai.com/configuration/custom-menu.html
+# 若要移除 "about", "archive" 和 "search" 頁面選單項目，將它們的 FrontMatter 中的 `menu` 欄位刪除
+menu:
+  main: []
+    # - identifier: home
+    #   name: Home
+    #   url: /
+    #   weight: -100
+    #   params:
+    #     icon: home
+
+  social:
+    - identifier: github
+      name: GitHub
+      url: https://github.com/JianShan-1214
+      params:
+        icon: brand-github
+    - identifier: linkedin
+      name: LinkedIn
+      url: https://www.linkedin.com/in/jianshan/
+      params:
+        icon: brand-linkedin
+
+
+related:
+  includeNewer: true
+  threshold: 60
+  toLower: true
+  indices:
+    - name: tags
+      weight: 100
+
+    - name: categories
+      weight: 200
+
+markup:
+  goldmark:
+    renderer:
+      ## Set to true if you have HTML content inside Markdown
+      unsafe: true
+  tableOfContents:
+    endLevel: 4
+    ordered: true
+    startLevel: 2
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+    lineNoStart: 1
+    lineNos: true
+    lineNumbersInTable: true
+    tabWidth: 4
