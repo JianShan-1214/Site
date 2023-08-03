@@ -1,7 +1,7 @@
 baseurl: https://blog.jianshan.me
 languageCode: zh-tw
 theme: hugo-theme-stack
-paginate: 5
+paginate: 20
 title: JianShan's Blog
 
 # 將它改成你的 Disqus 短名稱
