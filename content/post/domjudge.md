@@ -2,7 +2,8 @@
 title: "Domjudge Docker 安裝流程"
 date: 2021-08-01T01:35:00+08:00
 slug: "domjudge-docker"
-tags: ["雜學"]
+tags: ["domjudge", "docker", "judgehost", "雜學"]
+keywords: ["domjudge", "docker", "judgehost", '競賽環境']
 ---
 
 Docker 安裝部份請自行上網查閱，建議使用 Linux 生態系統
